@@ -1,0 +1,25 @@
+class Custumer:
+    #define all prms here with this format!
+    #(names do not have to be the same as long as the "self.txt" is = the wanted prm. if age was named "A" you could use "self.age = A")
+    def __init__(self, age, gender, name, state) -> None:
+        self.age = age
+        self.gender = gender
+        self.name = name
+        self.state = state
+
+
+    #You can make functions only accesable by this class or instances of this class which can use the instance's prms without typing them in again
+    #Ex. on what you dont need to do -> Profile(JimmysAge,JimmysName,JimmysGender,JimmysState)
+    #You can just ref "self" and then inside the code access the information whithout making new variables in your main function!
+
+    def Walk(self):
+        print(self.state)
+
+
+    #include self to reuse all other prms in different sections of your class.
+    #(No need to specify which prm you will be using specifically ex. self not self.txt)
+    def Profile(self):
+        return(f"Hi im {self.name} and I am a {self.age} year old {self.gender} who is currently {self.state}!")#Here is an f str btw! Im used to better add vars into strs!
+
+Jimmy = Custumer(20,"male","Jimmy","walking")
+Jimmy.Profile()
